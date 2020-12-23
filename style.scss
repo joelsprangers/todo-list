@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+$page-color: white;
+$text-color: black;
+$padding: 20px;
+
+@mixin flex-container($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.page{
+    max-width: 500px;
+    font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1em;
+    background-color: $page-color;
+    padding: $padding;
+}
+
+.header-title{
+    font-size: 40px;
+    @include flex-container(row);
+}
+
+.task-list__display{
+    padding: $padding;
+    @include flex-container(column);
+    background-color: rgb(235, 233, 233);
+
+}
+
+.task-input__display, .task__display {
+    padding: $padding;
+    @include flex-container(row);
+    background-color: rgb(235, 233, 233);
+}
+
+.task-button {
+    height: 30px;
+    width: 30px;
+    font-weight: bolder;
+    
+}
+.text {
+    padding-left: $padding;
+    font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
+    min-width: 300px;
+    border: unset;
+    width: auto;
+}
+
+.checked-task{
+    text-decoration: line-through;
+}
+
+.checked-box{
+    opacity: 0;
+    cursor: pointer;
+}
+
